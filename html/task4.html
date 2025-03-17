@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 4 - Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+      }
+      .container {
+        display: flex;
+        align-items: start;
+        gap: 15px;
+      }
+      .labels {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        font-weight: bold;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      input,
+      select {
+        width: 250px;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid black;
+      }
+      .btn {
+        margin-top: 15px;
+        background-color: #e6e6e6;
+        border: 1px solid black;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="labels">
+        <label>Full Name:</label>
+        <label>Username:</label>
+        <label>Password:</label>
+        <label>Re Password:</label>
+        <label>Address:</label>
+        <label>Age:</label>
+        <label>Gender:</label>
+      </div>
+      <div class="inputs">
+        <input type="text" value="Vincent Maverick Durano" />
+        <input type="text" value="Vinz" />
+        <input type="password" value="********" />
+        <input type="password" value="********" />
+        <input type="text" value="Cebu, Philippines" />
+        <input type="number" value="22" />
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <button class="btn">Save</button>
+      </div>
+    </div>
+  </body>
+</html>
