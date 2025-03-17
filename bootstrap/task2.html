@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <style>
+      /* Custom Styles */
+      .navbar {
+        background-color: #0c1b36;
+      }
+      .navbar-brand {
+        font-size: 24px;
+        font-weight: bold;
+        color: #f0b619;
+      }
+      .navbar-nav .nav-link {
+        color: white;
+      }
+      .hero-section {
+        position: relative;
+        background: url("https://source.unsplash.com/1600x900/?construction,workers")
+          center/cover;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+      .btn-quote {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 10px 20px;
+      }
+      .info-box {
+        padding: 20px;
+        text-align: center;
+        background: #0c1b36;
+        color: white;
+      }
+      .info-box h5 {
+        color: #f0b619;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Header -->
+    <div
+      class="bg-warning d-flex flex-row justify-content-between align-items-center p-4"
+    >
+      <h1><b>Builderz</b></h1>
+      <div
+        class="d-flex flex-row justify-content-between align-items-center gap-4"
+      >
+        <div>
+          <span>Opening Hour</span>
+          <br>
+          <span> Mon - Fri, 8:00 - 9:00 </span>
+        </div>
+        <div>
+            <span>Call Us</span>
+            <br>
+            <span> +012 345 6789 </span>
+          </div>
+          <div>
+            <span>Email</span>
+            <br>
+            <span>info@example.com</span>
+          </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">Builderz</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <a href="#" class="btn btn-warning ms-3">Get A Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <div class="hero-overlay">
+        <img src="https://ashusoni24.github.io/ethnus-mern-assignment/bootstrap/carousel.jpg"/>
+      </div>
+      <div class="hero-content">
+        <h2 class="fw-bold">We Are Professional</h2>
+        <h1 class="fw-bold">For Your Dream Project</h1>
+        <a href="#" class="btn btn-quote mt-3">Get A Quote</a>
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Info Boxes -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5>Expert Worker</h5>
+            <p>Lorem ipsum dolor sit amet elit.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box bg-warning text-dark">
+            <h5>Quality Work</h5>
+            <p>Lorem ipsum dolor sit amet elit.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="info-box">
+            <h5>24/7 Support</h5>
+            <p>Lorem ipsum dolor sit amet elit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
