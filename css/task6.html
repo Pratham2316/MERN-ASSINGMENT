@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f8f9fa;
+        margin: 0;
+      }
+      .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+      }
+      .container input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      .container button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .login-btn {
+        background-color: #28a745;
+        color: white;
+        margin-top: 10px;
+      }
+      .cancel-btn {
+        background-color: #dc3545;
+        color: white;
+        margin-top: 10px;
+      }
+      .forgot-password {
+        display: block;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" required />
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" required />
+        <button type="submit" class="login-btn">Login</button>
+        <div style="text-align: left; margin-top: 10px">
+          <input type="checkbox" id="remember" />
+          <label for="remember"> Remember me</label>
+        </div>
+        <button type="button" class="cancel-btn">Cancel</button>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </form>
+    </div>
+  </body>
+</html>
