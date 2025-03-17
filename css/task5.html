@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled Page</title>
+    <style>
+      body {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 50%; /* Width remains 50% */
+        height: 450px; /* Decreased height to 450px */
+        background-color: #c2c216;
+        padding: 20px;
+        border: 1px solid gray;
+      }
+
+      .sidebar {
+        float: left;
+        width: 150px;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 5px;
+        margin-bottom: 5px;
+        background: white;
+        text-decoration: none;
+        color: blue;
+        border-right: 20px solid black;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      .content {
+        margin-left: 180px;
+      }
+
+      h1 {
+        font-size: 24px;
+        color: purple;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .footer {
+        font-style: italic;
+        font-size: 12px;
+        margin-top: 20px;
+        border-top: 1px dotted black;
+        padding-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <a href="#">Home page</a>
+        <a href="#">Musings</a>
+        <a href="#">My town</a>
+        <a href="#">Links</a>
+      </div>
+
+      <div class="content">
+        <h1>My first styled page</h1>
+        <p>Welcome to my styled page!</p>
+        <p>
+          It lacks images, but at least it has style. And it has links, even if
+          they don't go anywhere...
+        </p>
+        <p>There should be more here, but I don't know what yet.</p>
+        <div class="footer">
+          <p>
+            <i>Made 5 April 2004<br />by myself.</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
