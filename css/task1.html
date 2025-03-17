@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task-1 Layout</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: white;
+      }
+
+      /* Table Styling */
+      table {
+        margin: auto;
+        width: 50%;
+        border-collapse: separate;
+        border-spacing: 5px;
+        background-color: lightblue;
+        border-radius: 10px;
+      }
+
+      th,
+      td {
+        border: 2px solid black;
+        padding: 10px;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 15px;
+      }
+
+      th {
+        font-weight: bold;
+        background-color: #85c1e9;
+      }
+
+      /* Shapes Section */
+      .shape-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .box {
+        width: 80px;
+        height: 50px;
+        border: 2px solid green;
+        border-radius: 10px;
+      }
+
+      .rounded {
+        border-radius: 20px;
+      }
+
+      .oval {
+        width: 90px;
+        height: 50px;
+        border: 2px solid green;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Table Section -->
+    <table>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Smith</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>Eve</td>
+        <td>Jackson</td>
+        <td>94</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>80</td>
+      </tr>
+    </table>
+
+    <!-- Shapes Section (3×3 Grid) -->
+    <div class="shape-container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box rounded"></div>
+      <div class="box"></div>
+      <div class="oval"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
