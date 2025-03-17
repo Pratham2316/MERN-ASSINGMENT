@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        background-color: #902a4c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #6c1f3b;
+        padding: 30px;
+        border-radius: 10px;
+        width: 400px;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .container label {
+        display: block;
+        margin-top: 10px;
+      }
+      .container input,
+      .container select,
+      .container textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: none;
+        background: white;
+        color: black;
+      }
+      .gender-group {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+      }
+      .gender-group label {
+        margin-right: 5px;
+      }
+      .gender-group input[type="radio"] {
+        margin-right: 10px;
+      }
+      .register-btn {
+        width: 100%;
+        padding: 10px;
+        background-color: white;
+        border: none;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <label>Name:</label>
+        <input type="text" placeholder="your name" />
+        <label>Email:</label>
+        <input type="email" placeholder="your email" />
+        <label>Password:</label>
+        <input type="password" placeholder="your password" />
+        <label>Phone Number:</label>
+        <input type="tel" placeholder="your phone number" />
+        <label>Gender:</label>
+        <div class="gender-group">
+          <label for="male">Male:</label>
+          <input type="radio" name="gender" id="male" />
+          <label for="female">Female:</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="other">Others:</label>
+          <input type="radio" name="gender" id="other" />
+        </div>
+        <label>Zip Code:</label>
+        <input type="text" placeholder="your zip code" />
+        <label>About:</label>
+        <textarea placeholder="Write about yourself..."></textarea>
+        <button type="submit" class="register-btn">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
