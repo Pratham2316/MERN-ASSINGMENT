@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Contact Form</h2>
+    <form id="contactForm">
+      <div>
+        <input type="text" id="name" placeholder="Name" />
+        <div class="error" id="nameError"></div>
+      </div>
+      <div>
+        <input type="email" id="email" placeholder="Email" />
+        <div class="error" id="emailError"></div>
+      </div>
+      <div>
+        <input type="url" id="website" placeholder="Website" />
+        <div class="error" id="websiteError"></div>
+      </div>
+      <div>
+        <textarea id="message" placeholder="Message"></textarea>
+        <div class="error" id="messageError"></div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Function to validate the form
+    function validateForm(event) {
+      event.preventDefault(); // Prevent form submission
+
+      // Get form inputs
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const website = document.getElementById("website").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Reset error messages
+      document.getElementById("nameError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("websiteError").innerText = "";
+      document.getElementById("messageError").innerText = "";
+
+      // Validate Name
+      if (name === "") {
+        document.getElementById("nameError").innerText = "This field is required";
+        return;
+      }
+
+      // Validate Email
+      if (email === "") {
+        document.getElementById("emailError").innerText = "This field is required";
+        return;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById("emailError").innerText = "A valid email address is required";
+        return;
+      }
+
+      // Validate Website
+      if (website === "") {
+        document.getElementById("websiteError").innerText = "This field is required";
+        return;
+      } else if (!/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/.test(website)) {
+        document.getElementById("websiteError").innerText = "A valid URL is required";
+        return;
+      }
+
+      // Validate Message
+      if (message === "") {
+        document.getElementById("messageError").innerText = "This field is required";
+        return;
+      }
+
+      // If all validations pass, submit the form
+      alert("Form submitted successfully!");
+    }
+
+    // Attach the validateForm function to the form's submit event
+    document.getElementById("contactForm").addEventListener("submit", validateForm);
+  </script>
+</body>
+</html>
