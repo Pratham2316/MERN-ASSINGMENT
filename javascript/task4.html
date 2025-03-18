@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display Date and Time</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .date, .time {
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Display Date and Time</h2>
+    <div class="date" id="date"></div>
+    <div class="time" id="time"></div>
+  </div>
 
+  <script>
+    // Function to format the date as "7/March/2023"
+    function formatDate(date) {
+      const day = date.getDate();
+      const month = date.toLocaleString('default', { month: 'long' });
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+
+    // Function to display the current date and time
+    function displayDateTime() {
+      const now = new Date();
+
+      // Format and display the date
+      const formattedDate = formatDate(now);
+      document.getElementById("date").innerText = `Date: ${formattedDate}`;
+
+      // Display the full time string
+      document.getElementById("time").innerText = `Time: ${now.toString()}`;
+    }
+
+    // Call the function to display date and time
+    displayDateTime();
+  </script>
+</body>
+</html>
