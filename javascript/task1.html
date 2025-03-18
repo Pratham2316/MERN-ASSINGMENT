@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reverse a Number</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    input {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Reverse a Number</h2>
+    <input type="number" id="inputNumber" placeholder="Enter a number" />
+    <button onclick="reverseNumber()">Reverse</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    // JavaScript function to reverse a number
+    function reverseNumber() {
+      // Get the input value
+      const input = document.getElementById("inputNumber").value;
+
+      // Convert the input to a string, reverse it, and convert it back to a number
+      const reversed = Number(input.toString().split("").reverse().join(""));
+
+      // Display the result
+      document.getElementById("result").innerText = `Reversed Number: ${reversed}`;
+    }
+  </script>
+</body>
+</html>
