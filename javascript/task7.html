@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Start/Stop Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    .box {
+      width: 50px;
+      height: 50px;
+      background-color: #007bff;
+      margin: 20px auto;
+      border-radius: 5px;
+      position: relative;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Start/Stop Animation</h2>
+    <div class="box" id="animatedBox"></div>
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+  </div>
+
+  <script>
+    let animationInterval;
+
+    // Function to start the animation
+    function startAnimation() {
+      const box = document.getElementById("animatedBox");
+      let position = 0;
+      clearInterval(animationInterval); // Clear any existing interval
+      animationInterval = setInterval(() => {
+        position = (position + 10) % 200; // Move the box within a range
+        box.style.left = `${position}px`;
+      }, 50);
+    }
+
+    // Function to stop the animation
+    function stopAnimation() {
+      clearInterval(animationInterval);
+    }
+  </script>
+</body>
+</html>
